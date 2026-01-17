@@ -1,0 +1,24 @@
+# --- Terraform ---
+# Local tool cache
+.terraform/
+
+# Local state files (since we use Azure backend, these shouldn't be here)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# --- MacOS ---
+# Ignore the hidden Mac folder that stores thumbnail info
+.DS_Store
+
+# --- Azure CLI ---
+# If you run login scripts that output to files
+.azure/
+azure-credentials.json
