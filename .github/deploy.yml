@@ -3,6 +3,7 @@ name: 'Azure Terraform Deploy'
 on:
   push:
     branches: [ "main" ] # Trigger whenever you push to the main branch
+  workflow_dispatch: #
 
 permissions:
   id-token: write # Required for requesting the JWT from Azure
