@@ -1,5 +1,5 @@
 name: 'Azure Terraform Deploy'
-
+#manual push
 on:
   push:
     branches: [ "main" ] # Trigger whenever you push to the main branch
