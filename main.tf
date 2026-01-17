@@ -17,10 +17,12 @@ resource "azurerm_virtual_network" "lab_vnet" {
   resource_group_name = azurerm_resource_group.lab.name
 }
 
-# Create a Subnet
-resource "azurerm_subnet" "internal" {
-  name                 = "snet-internal"
+
+resource "azurerm_subnet" "lab_subnets" {
+  for_each             = var.subnets
+  name                 = each.key    # Takes "snet-management", etc.
+  address_prefixes     = [each.value] # Takes "10.1.0.0/28", etc.
+  
   resource_group_name  = azurerm_resource_group.lab.name
   virtual_network_name = azurerm_virtual_network.lab_vnet.name
-  address_prefixes     = ["10.0.1.0/24"]
 }
