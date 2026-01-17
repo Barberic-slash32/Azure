@@ -11,7 +11,7 @@ terraform {
   # This is where your pipeline stores its "memory"
   backend "azurerm" {
     resource_group_name  = "tfstate-rg"
-    storage_account_name = "youruniquestorageacct" # Replace with your storage name
+    storage_account_name = "labtfstate4github" # Replace with your storage name
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
     use_oidc             = true
